@@ -1,6 +1,6 @@
 # Artist Album Service
 
-It is a RESTful webservice that takes in a String that is a recording artist's name and return back in JSON format, the top 10 albums by that artist listing the individual tracks for each album. It uses the the following two LastFM API (http://www.last.fm/api)
+It is a RESTful webservice that takes in a String that is a recording artist's name and return back in JSON format, the top 10 albums by that artist listing the individual tracks for each album. It uses the the following two LastFM APIs (http://www.last.fm/api)
 
 1. artist.getTopAlbums: It gets the top albums for an artist on Last.fm, ordered by popularity
 2. album.getInfo: It gets the metadata and tracklist for an album on Last.fm using the album name or a musicbrainz id
