@@ -33,7 +33,7 @@ __Create an Application class__
  - Normally you would add @EnableWebMvc for a Spring MVC app, but Spring Boot adds it automatically when it sees spring-webmvc on the classpath. This flags the application as a web application and activates key behaviors such as setting up a DispatcherServlet.
  - @ComponentScan tells Spring to look for other components, configurations, and services in the the hello package, allowing it to find the HelloController.
  
-The main() method uses Spring Boot's SpringApplication.run() method to launch an application. It doesn't need a single line of XML. It doesn't need web.xml file either. This web application is 100% pure Java and you didn¯t have to deal with configuring any plumbing or infrastructure.
+The main() method uses Spring Boot's SpringApplication.run() method to launch an application. It doesn't need a single line of XML. It doesn't need web.xml file either. This web application is 100% pure Java and you didn't have to deal with configuring any plumbing or infrastructure.
 
 The run() method returns an ApplicationContext and this application then retrieves all the beans that were created either by this app or were automatically added thanks to Spring Boot.
 
