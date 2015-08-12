@@ -1,6 +1,6 @@
 # Artist Album Service
 
-It is a RESTful webservice that takes in a String that is a recording artist¡¯s name and return back in JSON format, the top 10 albums by that artist listing the individual tracks for each album. It uses the the following two LastFM API (http://www.last.fm/api)
+It is a RESTful webservice that takes in a String that is a recording artist's name and return back in JSON format, the top 10 albums by that artist listing the individual tracks for each album. It uses the the following two LastFM API (http://www.last.fm/api)
 
 1. artist.getTopAlbums: It gets the top albums for an artist on Last.fm, ordered by popularity
 2. album.getInfo: It gets the metadata and tracklist for an album on Last.fm using the album name or a musicbrainz id
@@ -20,7 +20,7 @@ Spring Boot has following features:
  
 __Create a simple RESTful webservice application__
 
-TopAlbumController class is flagged as a @RestController, meaning it¡¯s ready for use by Spring MVC to handle web requests. @RequestMapping maps "/topAlbums/{artist}" to the topAlbums method. @ParamVariable maps the parameter variable "artistName" for "{artist}" in the URL path. When invoked from a browser or using curl on the command line, the method returns JSON for com.gstv.domain.TopAlbum object. That¡¯s because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
+TopAlbumController class is flagged as a @RestController, meaning itÂ¡Â¯s ready for use by Spring MVC to handle web requests. @RequestMapping maps "/topAlbums/{artist}" to the topAlbums method. @ParamVariable maps the parameter variable "artistName" for "{artist}" in the URL path. When invoked from a browser or using curl on the command line, the method returns JSON for com.gstv.domain.TopAlbum object. ThatÂ¡Â¯s because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
 
 TopAlbumController autowires TopAlbumServiceImp which implements TopAlbumService interface. TopAlbumServiceImpl is annotated as @Service. So, it can be autowired.
 
@@ -33,13 +33,13 @@ __Create an Application class__
  - Normally you would add @EnableWebMvc for a Spring MVC app, but Spring Boot adds it automatically when it sees spring-webmvc on the classpath. This flags the application as a web application and activates key behaviors such as setting up a DispatcherServlet.
  - @ComponentScan tells Spring to look for other components, configurations, and services in the the hello package, allowing it to find the HelloController.
  
-The main() method uses Spring Boot¡¯s SpringApplication.run() method to launch an application. It doesn't need a single line of XML. It doesn't need web.xml file either. This web application is 100% pure Java and you didn¡¯t have to deal with configuring any plumbing or infrastructure.
+The main() method uses Spring BootÂ¡Â¯s SpringApplication.run() method to launch an application. It doesn't need a single line of XML. It doesn't need web.xml file either. This web application is 100% pure Java and you didnÂ¡Â¯t have to deal with configuring any plumbing or infrastructure.
 
 The run() method returns an ApplicationContext and this application then retrieves all the beans that were created either by this app or were automatically added thanks to Spring Boot.
 
 __Create TopAlbumService interface and its implementation class__
 
-TopAlbumServiceImpl class implements TopAlbumService interface. getTopAlbums method TopAlbumServiceImpl class takes in an artist¡¯s name and sends a RESTful webservice call to LastFM artist.getTopAlbums API using Spring RestTemplate. LastFM artist.getTopAlbums API returns the artist's top 10 albums. Then it sends RESTful webservice calls to LastFM's album.getInfo API for each album to take those albums' tracks.
+TopAlbumServiceImpl class implements TopAlbumService interface. getTopAlbums method TopAlbumServiceImpl class takes in an artistÂ¡Â¯s name and sends a RESTful webservice call to LastFM artist.getTopAlbums API using Spring RestTemplate. LastFM artist.getTopAlbums API returns the artist's top 10 albums. Then it sends RESTful webservice calls to LastFM's album.getInfo API for each album to take those albums' tracks.
 
 LastFM's domain object classes have been created based on two LastFM APIs' XML responses. After getting LastFM's domain objects from the APIs, it copies all the objects' properties to GSTV domain objects using Spring BeanUtils.
 
