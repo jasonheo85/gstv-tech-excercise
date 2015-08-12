@@ -20,7 +20,7 @@ Spring Boot has following features:
  
 __Create a simple RESTful webservice application__
 
-TopAlbumController class is flagged as a @RestController, meaning it¯s ready for use by Spring MVC to handle web requests. @RequestMapping maps "/topAlbums/{artist}" to the topAlbums method. @ParamVariable maps the parameter variable "artistName" for "{artist}" in the URL path. When invoked from a browser or using curl on the command line, the method returns JSON for com.gstv.domain.TopAlbum object. That¡¯s because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
+TopAlbumController class is flagged as a @RestController, meaning it is ready for use by Spring MVC to handle web requests. @RequestMapping maps "/topAlbums/{artist}" to the topAlbums method. @ParamVariable maps the parameter variable "artistName" for "{artist}" in the URL path. When invoked from a browser or using curl on the command line, the method returns JSON for com.gstv.domain.TopAlbum object. That¡¯s because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
 
 TopAlbumController autowires TopAlbumServiceImp which implements TopAlbumService interface. TopAlbumServiceImpl is annotated as @Service. So, it can be autowired.
 
