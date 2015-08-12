@@ -39,7 +39,7 @@ The run() method returns an ApplicationContext and this application then retriev
 
 __Create TopAlbumService interface and its implementation class__
 
-TopAlbumServiceImpl class implements TopAlbumService interface. getTopAlbums method TopAlbumServiceImpl class takes in an artist¯s name and sends a RESTful webservice call to LastFM artist.getTopAlbums API using Spring RestTemplate. LastFM artist.getTopAlbums API returns the artist's top 10 albums. Then it sends RESTful webservice calls to LastFM's album.getInfo API for each album to take those albums' tracks.
+TopAlbumServiceImpl class implements TopAlbumService interface. getTopAlbums method TopAlbumServiceImpl class takes in an artist's name and sends a RESTful webservice call to LastFM artist.getTopAlbums API using Spring RestTemplate. LastFM artist.getTopAlbums API returns the artist's top 10 albums. Then it sends RESTful webservice calls to LastFM's album.getInfo API for each album to take those albums' tracks.
 
 LastFM's domain object classes have been created based on two LastFM APIs' XML responses. After getting LastFM's domain objects from the APIs, it copies all the objects' properties to GSTV domain objects using Spring BeanUtils.
 
